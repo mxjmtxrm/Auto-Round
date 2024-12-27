@@ -25,18 +25,18 @@ BUILD_HPU_ONLY = os.environ.get("BUILD_HPU_ONLY", "0") == "1"
 
 def is_cuda_available():
     try:
-        os.system("pip install torch")
         import torch
 
         return torch.cuda.is_available()
     except Exception as e:
+        os.system("pip install torch")
         print(f"Checking CUDA availability failed: {e}")
         return False
 
 
-if is_cuda_available():
-    # When CUDA is available, we build CUDA extension by default
-    BUILD_CUDA_EXT = True
+# if is_cuda_available():
+#     # When CUDA is available, we build CUDA extension by default
+#     BUILD_CUDA_EXT = True
 
 
 @lru_cache(None)

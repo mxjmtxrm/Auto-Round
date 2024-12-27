@@ -153,7 +153,7 @@ class AutoRound(object):
             act_group_size: int = None,
             act_sym: bool = None,
             act_data_type: str = None,
-            act_dynamic: bool = True,
+            act_dynamic: bool = False,
             to_quant_block_names: Union[str, list] = None,
             enable_norm_bias_tuning: bool = False,
             enable_torch_compile: bool = None,

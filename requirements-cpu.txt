@@ -12,5 +12,5 @@ packaging
 pillow
 numba
 tbb
-intel-extension-for-pytorch
-intel-extension-for-transformers
+# intel-extension-for-pytorch
+# intel-extension-for-transformers
